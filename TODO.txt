@@ -1,0 +1,45 @@
+Hey Claude, suppose you are a mathematician and a MERN developer now make a cool and sleeky looking responsive website to vizualize hypothesis texting.
+
+What happens is,
+user upload a dataset, (in csv, or excel format)
+then user writes a query (where he or she can mention whatever they like
+then user gives us the what kind of sampling he/she wants to do (stratified, random, purposed or systematic)
+then user gives us 1 null hypothesis
+and m alternate hypothesis
+
+steps:
+1)from this we will first find our variables like xbar(sample mean), u(population mean), sigma(population variance)(if given in the query that we need not find sample variance, or we are told to use population variance, or to use t-test only,etc), s(if we dont have sigma, take sample variance), n(no. of samples)
+
+2)we will determine if it's around mean or around variance to see if we need to use z or t test or chi-square test
+
+3) we will see if it is a 1 tail or 2 tail based on the hypothesis
+
+4) If alpha(level of significance is given we take it else we find the level of significance) from critical region or if both are not given we assume it from the null hypothesis and the dataset stats using LLM
+
+5) Compare the calculated z, t or chi-square value with tabular value
+
+6) check it on the value of alpha to see if hypothesis is true or false
+
+for now make me the frontend only where the above steps are done and a result page where users input, calculated values, conclusion will be showed and below that we will show the value if it lies on acceptance region or rejection region using charts
+
+
+response:
+{
+  "sampleMean": number,
+  "populationMean": number,
+  "populationVariance": number,        // optional
+  "sampleVariance": number,            // optional
+  "sampleSize": number,
+  "testType": "z-test" | "t-test" | "chi-square",
+  "tailType": "left-tailed" | "right-tailed" | "two-tailed",
+  "testStatistic": number,
+  "criticalValue": number,
+  "pValue": number,
+  "isInRejectionRegion": boolean,
+  "conclusion": string
+}
+
+
+//z-test with one tail done
+//z-test two tail to be added
+//if possible t test with one tail
