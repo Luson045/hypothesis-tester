@@ -61,7 +61,7 @@ function App() {
         
         {results && <ResultDisplay results={results} />}
         <footer className="text-center text-gray-500 text-sm mt-8">
-          <p>© 2023 Hypothesis Testing App. All rights reserved.</p>
+          <p>© 2025 Hypothesis Testing App. All rights reserved.</p>
           <p>Developed by Luson Basumatary</p>
           <p>Contact: lusonbasumatary2@gmail.com
             <a href="mailto:lusonbasumatary2@gmail.com"/>
