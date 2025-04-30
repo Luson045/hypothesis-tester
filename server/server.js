@@ -12,7 +12,7 @@ const API_KEY = process.env.API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 const PORT = 5000;
 const corsOptions = {
-  origin: ['http://localhost:5173','https://hypothesis-tester.vercel.app/'],
+  origin: ['http://localhost:5173','https://hypothesis-tester.vercel.app'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
