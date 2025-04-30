@@ -400,6 +400,7 @@ app.post('/hypothesis-test', (req, res) => {
       "isInRejectionRegion": resultant,
       "alternateHypotheses": alternateHypList,
       "nullhyp": nullHyp,
+      "alpha": alpha,
     });
   }); 
 });

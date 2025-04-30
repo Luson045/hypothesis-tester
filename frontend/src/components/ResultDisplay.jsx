@@ -438,8 +438,8 @@ const ResultDisplay = ({ results }) => {
         {results.isInRejectionRegion !== undefined ? (
           <p className="text-gray-700">
             {results.isInRejectionRegion 
-              ? "We fail to reject the null hypothesis. There is not enough evidence to support the alternative hypothesis." 
-              : "We reject the null hypothesis in favor of the alternative hypothesis."}
+              ? `Since the test statistic falls in the rejection region, it is significant that the Null Hypothesis fails under ${results.alpha} level of significance. Hence, we reject the null hypothesis.`
+              : `We conclude that the data don't provide us with any evidence against the Null Hypothesis, which may therefore be accepted at ${results.alpha} level of significance.` }
           </p>
         ) : (
           <p className="text-gray-700">
